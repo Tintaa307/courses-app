@@ -9,13 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        red: "#e63c17",
-        orange: "#e86420",
+        violet: "#DC143C",
+        orange: "#ff8200",
+        transparent: "transparent",
+        black: "#000",
+        white: "#f2f2f2",
+        bg_color: "#0e0b13",
+        input_color: "#26232a",
+        input_color_dark: "#1e1c22",
+        error_color: "#e5484d",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "main-gradient": "linear-gradient(82deg,#DC143C 19%,#ff8200);",
       },
     },
   },
