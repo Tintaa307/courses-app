@@ -40,7 +40,7 @@ const LoginGoogleButton = ({
         onMouseDown={() => setIsFocus(true)}
         onMouseUp={() => setIsFocus(false)}
         className={cn(
-          "w-full h-[50px] rounded-md bg-input_color_dark flex items-center justify-center flex-row gap-3 text-white/60 font-normal text-lg hover:bg-[#232127] shadow-[0_4px_1px_#13131A] transition-all duration-150",
+          "w-full h-[50px] rounded-md bg-input_color_dark flex items-center justify-center flex-row gap-3 text-white/60 font-normal text-lg hover:bg-[#232127] shadow-[0_4px_1px_#13131A] transition-all duration-150 my-4",
           {
             "shadow-none": isFocus,
           }
