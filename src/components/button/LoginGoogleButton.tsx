@@ -11,8 +11,10 @@ import { IconBrandGoogleFilled } from "@tabler/icons-react"
 
 const LoginGoogleButton = ({
   session,
+  text,
 }: {
   session: SupabaseSession | null
+  text: string
 }) => {
   const [isFocus, setIsFocus] = useState(false)
   const supabase = createClientComponentClient()
@@ -34,7 +36,7 @@ const LoginGoogleButton = ({
   }, [session])
 
   return (
-    <div className="w-[50%] flex items-start justify-center flex-col ">
+    <div className="w-[25%] flex items-start justify-center flex-col ">
       <button
         onClick={handleSignInWithGoogle}
         onMouseDown={() => setIsFocus(true)}
@@ -47,7 +49,7 @@ const LoginGoogleButton = ({
         )}
       >
         <IconBrandGoogleFilled />
-        Sign in with Google
+        {text}
       </button>
     </div>
   )

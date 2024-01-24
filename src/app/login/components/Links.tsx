@@ -1,12 +1,12 @@
 import Link from "next/link"
 import React from "react"
 
-const Links = () => {
+const Links = ({ text, link }: { text: string; link: string }) => {
   return (
     <small className="text-white/60 text-sm">
       Don´t have any account?{" "}
-      <Link href={"/register"} className="text-white underline">
-        Sign Up Now
+      <Link href={`/${link}`} className="text-white underline">
+        {text}
       </Link>
     </small>
   )

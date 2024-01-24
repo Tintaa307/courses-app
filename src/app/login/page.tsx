@@ -6,6 +6,7 @@ import Separator from "./components/Separator"
 import Links from "./components/Links"
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 import { cookies } from "next/headers"
+import Button from "@/components/button/Button"
 
 const Login = async () => {
   const supabase = createServerComponentClient({ cookies })
@@ -15,34 +16,19 @@ const Login = async () => {
 
   return (
     <main
-      className={[
-        "w-full flex items-center justify-center flex-row",
-        "height",
-      ].join(" ")}
+      className={["w-full flex items-center justify-center", "height"].join(
+        " "
+      )}
     >
-      <section className="w-1/2 h-full flex items-center justify-center flex-col">
+      <section className="w-full h-full flex items-center justify-center flex-col">
         <div className="w-full h-max flex items-center justify-center flex-col gap-6">
           <Titles />
-          <LoginGoogleButton session={session} />
-          <Separator />
+          <Links text="Sign up now" link="register" />
+          <LoginGoogleButton session={session} text={"Sign in with Google"} />
+          <Separator text="or" />
           <LoginForm />
-          <Links />
-        </div>
-        <div className="w-full h-max flex items-center justify-center text-center mt-12">
-          <p className="text-gray-600 text-xs w-1/2">
-            By continuing, you agree to Courses-app{" "}
-            <span className="underline italic text-white/50">
-              Terms of Service
-            </span>{" "}
-            and{" "}
-            <span className="underline italic text-white/50">
-              Privacy Policy
-            </span>
-            , and to receive periodic emails with updates.
-          </p>
         </div>
       </section>
-      <section className="w-1/2 h-full flex items-center justify-center"></section>
     </main>
   )
 }

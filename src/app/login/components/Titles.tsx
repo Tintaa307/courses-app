@@ -2,13 +2,10 @@ import React from "react"
 
 const Titles = () => {
   return (
-    <div className="w-[50%] flex items-start justify-center flex-col ">
-      <h1 className="text-white text-[38px] font-semibold mt-12">
-        Welcome back
+    <div className="w-[25%] flex items-center justify-center flex-col gap-4">
+      <h1 className="text-white text-3xl font-semibold mt-12">
+        Sign in into your account
       </h1>
-      <small className="text-gray-400 font-normal text-sm">
-        Sign in to your account
-      </small>
     </div>
   )
 }

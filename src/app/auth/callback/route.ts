@@ -13,5 +13,5 @@ export async function GET(req: NextRequest) {
     await supabase.auth.exchangeCodeForSession(code)
   }
 
-  return NextResponse.redirect("http://localhost:3000/")
+  return NextResponse.redirect(requestUrl.origin)
 }
